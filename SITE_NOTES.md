@@ -71,3 +71,24 @@ remote source and Sites remote build. Keep `package-lock.json` resolved URLs on
 the official npm registry; the mirror URLs caused a failed remote build. For
 future updates, reuse the existing Site and release checkout, push the exact
 source commit, then publish a new private version and verify deployment status.
+
+## Sites synchronization (2026-10-27)
+
+GitHub/Cloudflare and the GPT Sites publication use separate source repositories.
+Pushing GitHub does not update the GPT Site. Retain the existing Sites project
+and its current audience; the live access response on this date is public.
+
+`node scripts/sync-sites-mobile.cjs .sites-release` now includes project videos,
+native video posters and the Pages asset checker. It validates matching full-size
+and preview images without assuming the old fixed total of 70 images. The latest
+copy includes 128 full-size images, 129 previews, one project video and three
+native posters. The 279-file Sites build passed size checks; its application
+bundle matches the current root build. Existing artwork and profile updates,
+People's Park, apartment AI-render comparisons and family-home analyses are included.
+
+Sites source `829e4ae5c9c9f139623453e12a51081beebbb802` has the same tree as the
+verified full update checkpoint. It was pushed in nine bounded batches after a
+single large push exceeded the source server's receive-pack limit. Version 4
+was saved with the matching local archive. The isolated checkout and prior source
+bundle are preserved; the backup is under
+`E:\CodexData\backups\portfolio-website\sites-sync-20261027`.
