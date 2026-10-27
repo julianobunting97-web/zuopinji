@@ -1,0 +1,38 @@
+{
+  "routes": [
+    "/projects/single-apartment#ai-render-process",
+    "/projects/family-home#design-analysis"
+  ],
+  "desktopWidth": 1280,
+  "mobileWidths": [
+    390,
+    320
+  ],
+  "horizontalOverflow": false,
+  "singleApartment": {
+    "comparisonPairs": 2,
+    "diagrams": 4,
+    "whiteModelDimensions": [
+      2560,
+      1440
+    ],
+    "zoom": "300%",
+    "viewerNavigation": "2 / 2"
+  },
+  "familyHome": {
+    "diagrams": 9,
+    "boardDimensions": [
+      3508,
+      4961
+    ],
+    "viewerNavigation": "2 / 9"
+  },
+  "assets": {
+    "added": 16,
+    "existingUnchanged": 14,
+    "httpChecks": 36
+  },
+  "browserErrors": [],
+  "build": "passed",
+  "backup": "E:/CodexData/backups/portfolio-website/interior-project-updates-20261025-214751"
+}

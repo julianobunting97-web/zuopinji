@@ -1,0 +1,23 @@
+{
+  "route": "http://localhost:4173/projects/people-park",
+  "viewportsChecked": [
+    1440,
+    1280,
+    390,
+    320
+  ],
+  "horizontalOverflow": false,
+  "boards": 2,
+  "renders": 26,
+  "diagrams": 13,
+  "fullSizeImageZoom": "300%",
+  "imageNavigation": "2 / 26",
+  "analysisAnchorTop": 108,
+  "videoDuration": 64.202993,
+  "videoSeekTime": 10,
+  "videoRangeStatus": 206,
+  "browserErrors": [],
+  "existingProjectsUnchanged": 6,
+  "sourceImageHashesVerified": 42,
+  "backup": "E:/CodexData/backups/portfolio-website/people-park-20261025-204454"
+}

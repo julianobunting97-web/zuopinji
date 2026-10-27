@@ -4,6 +4,9 @@ import PortfolioMotion from './components/PortfolioMotion'
 import PortfolioCard from './components/PortfolioCard'
 import ProfileCard from './components/ProfileCard'
 import { ProceduralVideoBackground } from './components/ProceduralVideoBackground'
+import { peoplePark } from './data/peoplePark'
+import RenderProcess from './components/RenderProcess'
+import { singleApartmentDiagrams, singleApartmentRenderProcess, familyHomeDiagrams, familyHomePresentationBoards } from './data/interiorUpdates'
 const portraitCaoShuo = '/portfolio/portrait-cao-shuo.preview.webp'
 const previewSrc = (src) => src.replace(/\.(png|jpe?g)$/i, '.preview.webp')
 
@@ -19,9 +22,8 @@ const navigation = [
 ]
 
 const profileStats = [
-  { value: '3.86 / 4.0', label: 'GPA' },
+  { value: '3.61', label: 'GPA' },
   { value: '3 / 80', label: '学年成绩排名' },
-  { value: '7 / 80', label: '学年综测排名' },
   { value: '10+', label: '设计与 AI 工具' },
 ]
 
@@ -29,11 +31,10 @@ const profileDetails = [
   { label: '姓名', value: '曹硕' },
   { label: '学校', value: '潍坊学院' },
   { label: '专业', value: '环境设计（本科）' },
-  { label: '地点', value: '山东省潍坊市奎文区' },
 ]
 
 const heroPosterMetrics = [
-  { value: '3.86', label: 'GPA' },
+  { value: '3.61', label: 'GPA' },
   { value: '3/80', label: '专业排名' },
   { value: '2027', label: '毕业时间' },
 ]
@@ -136,6 +137,7 @@ const conceptSpaceVideos = [
 ]
 
 const projectCards = [
+  peoplePark,
   {
     slug: '1532-park',
     title: '潍坊市 1532 产业园改造项目',
@@ -186,8 +188,13 @@ const projectCards = [
       '以低饱和材质、自然肌理和柔和光线塑造安静克制的居住氛围，兼顾家庭成员的生活动线、休憩需求与空间情绪。',
     points: ['客厅', '餐厅', '直播间', '老人房'],
     image: '/portfolio/family-home-cover.jpeg',
+    galleryDescription: '通过客餐厅、卧室与工作空间的效果表达，呈现自然材质和柔和光线下的居住氛围。',
+    gallerySubtitle: '浏览各空间效果图，点击“查看原图”可放大并连续查看。',
+    diagramDescription: '通过彩色平面、功能分区、动线与轴测图理解空间组织，再由五组材料图解呈现各房间的界面与细节。',
+    presentationBoards: familyHomePresentationBoards,
     media: {
       images: familyHomeImages,
+      diagrams: familyHomeDiagrams,
       videos: [],
     },
   },
@@ -197,11 +204,16 @@ const projectCards = [
     category: '小户型 / 室内设计',
     period: '居住空间',
     description:
-      '针对单人生活方式重构紧凑空间的功能效率，强化厨房、休息、娱乐和收纳之间的连续性，让小空间具备完整生活场景。',
-    points: ['厨房', '电竞房', '紧凑动线', '功能整合'],
+      '以“轻简松弛 + 功能复合”为核心，将起居、餐厨、收纳与电竞融入紧凑布局，并以白模与 AI 效果图对照展示材质、光线和空间氛围的表达过程。',
+    points: ['白模推演', 'AI 渲染', '功能分区', '材质分析'],
     image: '/portfolio/single-apartment-cover.png',
+    renderProcess: singleApartmentRenderProcess,
+    galleryDescription: '从空间整体到生活场景，呈现独居生活中的起居、餐厨、休憩与电竞体验。',
+    gallerySubtitle: '浏览空间效果与场景表达，点击“查看原图”可放大并连续查看。',
+    diagramDescription: '结合彩色平面与功能分区说明紧凑空间的组织，再通过客厅和厨房的材质拆解呈现设计细节。',
     media: {
       images: singleApartmentImages,
+      diagrams: singleApartmentDiagrams,
       videos: [],
     },
   },
@@ -261,6 +273,8 @@ const honors = [
   '2023-2024 学年潍坊学院三等奖学金',
   '2024-2025 学年潍坊学院优秀学生',
   '2024-2025 学年潍坊学院二等奖学金',
+  '2025-2026 学年潍坊学院一等奖学金',
+  '2025-2026 学年潍坊学院优秀学生',
 ]
 
 const contactItems = [
@@ -539,6 +553,15 @@ function ZoomablePreviewImage({ item }) {
 function ProjectDetailPage({ project, onOpenMedia, onOpenImage }) {
   const images = project.media?.images || []
   const videos = project.media?.videos || []
+  const diagrams = project.media?.diagrams || []
+  const renderProcess = project.renderProcess
+  const presentationBoards = project.presentationBoards || []
+  const hasDesign = Boolean(project.designHighlights?.length)
+  const hasProcess = Boolean(renderProcess?.cases?.length)
+  const processIndex = (hasDesign ? 1 : 0) + 1
+  const galleryIndex = (hasDesign ? 1 : 0) + (hasProcess ? 1 : 0) + 1
+  const boardIndex = galleryIndex + 1 + (diagrams.length > 0 ? 1 : 0)
+  const videoIndex = boardIndex + (presentationBoards.length > 0 ? 1 : 0)
 
   return (
     <main className="project-detail-page" id="top">
@@ -552,21 +575,27 @@ function ProjectDetailPage({ project, onOpenMedia, onOpenImage }) {
             <h1>{project.title}</h1>
             <p>{project.description}</p>
             <div className="project-detail-actions">
+              {hasProcess ? (
+                <a className="button button-primary" href="#ai-render-process">查看 AI 渲染过程</a>
+              ) : null}
               {images.length > 0 ? (
                 <button
                   type="button"
-                  className="button button-primary"
+                  className={`button ${hasProcess ? 'button-ghost' : 'button-primary'}`}
                   onClick={() =>
                     onOpenMedia({
                       type: 'images',
                       title: `${project.title} · 效果图展示`,
-                      subtitle: '项目效果图已接入，可继续补充更多角度与细节图。',
+                      subtitle: project.gallerySubtitle || '项目效果图已接入，可继续补充更多角度与细节图。',
                       items: images,
                     })
                   }
                 >
                   查看全部效果图
                 </button>
+              ) : null}
+              {diagrams.length > 0 ? (
+                <a className="button button-ghost" href="#design-analysis">查看设计分析</a>
               ) : null}
               {videos.length > 0 ? (
                 <button
@@ -576,7 +605,7 @@ function ProjectDetailPage({ project, onOpenMedia, onOpenImage }) {
                     onOpenMedia({
                       type: 'videos',
                       title: `${project.title} · 短片展示`,
-                      subtitle: '项目短片已接入，视频文件较大，首次播放可能需要一点缓冲。',
+                      subtitle: project.videoSubtitle || '项目短片已接入，视频文件较大，首次播放可能需要一点缓冲。',
                       items: videos,
                     })
                   }
@@ -623,17 +652,46 @@ function ProjectDetailPage({ project, onOpenMedia, onOpenImage }) {
         </div>
       </section>
 
+      {hasDesign ? (
+        <section className="section project-detail-section">
+          <div className="container">
+            <SectionHeader index="01" title="方案解读" description={project.designIntro} />
+            <div className="project-design-highlights">
+              {project.designHighlights.map((item) => (
+                <article key={item.title}>
+                  <h2>{item.title}</h2>
+                  <p>{item.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {hasProcess ? (
+        <section className="section project-detail-section" id="ai-render-process">
+          <div className="container">
+            <SectionHeader
+              index={String(processIndex).padStart(2, '0')}
+              title={renderProcess.title}
+              description={renderProcess.description}
+            />
+            <RenderProcess process={renderProcess} onOpenImage={onOpenImage} />
+          </div>
+        </section>
+      ) : null}
+
       <section className="section project-detail-section">
         <div className="container">
           <SectionHeader
-            index="01"
+            index={String(galleryIndex).padStart(2, '0')}
             title="项目图集"
-            description="独立项目详情页，用于集中展示该项目的完整效果图与关键视觉素材。"
+            description={project.galleryDescription || '独立项目详情页，用于集中展示该项目的完整效果图与关键视觉素材。'}
           />
           <div className="project-detail-gallery">
             {images.map((item) => (
               <article key={item.src} className="project-detail-gallery-card">
-                <button type="button" onClick={() => onOpenImage(item, images)}>
+                <button type="button" aria-label={`查看${item.title}原图`} onClick={() => onOpenImage(item, images)}>
                   <img src={previewSrc(item.src)} alt={item.title} loading="lazy" decoding="async" />
                 </button>
                 <div>
@@ -646,11 +704,56 @@ function ProjectDetailPage({ project, onOpenMedia, onOpenImage }) {
         </div>
       </section>
 
+      {diagrams.length > 0 ? (
+        <section className="section project-detail-section" id="design-analysis">
+          <div className="container">
+            <SectionHeader
+              index={String(galleryIndex + 1).padStart(2, '0')}
+              title="设计分析"
+              description={project.diagramDescription}
+            />
+            <div className="project-detail-gallery project-diagram-gallery">
+              {diagrams.map((item) => (
+                <article key={item.src} className="project-detail-gallery-card">
+                  <button type="button" aria-label={`查看${item.title}原图`} onClick={() => onOpenImage(item, diagrams)}>
+                    <img src={previewSrc(item.src)} alt={item.title} loading="lazy" decoding="async" />
+                  </button>
+                  <div><strong>{item.title}</strong><span>{item.meta}</span></div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {presentationBoards.length > 0 ? (
+        <section className="section project-detail-section" id="presentation-boards">
+          <div className="container">
+            <SectionHeader
+              index={String(boardIndex).padStart(2, '0')}
+              title="方案展板"
+              description="将设计说明、空间效果和分析图解集中呈现，点击展板可放大阅读。"
+            />
+            <div className="project-presentation-boards">
+              {presentationBoards.map(board => (
+                <figure key={board.src}>
+                  <button type="button" aria-label={`查看${board.title}原图`} onClick={() => onOpenImage(board, presentationBoards)}>
+                    <img src={previewSrc(board.src)} alt={board.title} loading="lazy" decoding="async" />
+                    <span>放大查看展板</span>
+                  </button>
+                  <figcaption><strong>{board.title}</strong><span>{board.meta}</span></figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       {videos.length > 0 ? (
         <section className="section project-detail-section">
           <div className="container">
             <SectionHeader
-              index="02"
+              index={String(videoIndex).padStart(2, '0')}
               title="项目短片"
               description="视频支持拖动进度条、快进和后退，适合展示空间叙事与方案动线。"
             />
@@ -737,6 +840,18 @@ export default function App() {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('resize', handleScroll)
     }
+  }, [activeProject])
+
+  useEffect(() => {
+    if (!window.location.hash) return undefined
+
+    let cancelled = false
+    const sectionId = window.location.hash.slice(1)
+    document.fonts.ready.then(() => {
+      if (!cancelled) document.getElementById(sectionId)?.scrollIntoView({ behavior: 'instant' })
+    })
+
+    return () => { cancelled = true }
   }, [activeProject])
 
   useEffect(() => {
@@ -861,7 +976,7 @@ export default function App() {
               <span className="hero-separator" />
               <span className="hero-kicker">INTERIOR / AI / LANDSCAPE</span>
             </div>
-            <p className="eyebrow">环境设计本科在读 · 室内设计师 / AIGC 设计师 / 景观规划师</p>
+            <p className="eyebrow">环境设计本科在读 · 室内设计 / AIGC 设计 / 景观规划</p>
             <h1>
               <span className="hero-title-en">PORTFOLIO</span>
             </h1>
@@ -920,7 +1035,7 @@ export default function App() {
                   <p className="mini-label">About Me</p>
                   <h2>以空间为媒介，连接设计逻辑、视觉表达与 AIGC 创作。</h2>
                   <p>
-                    我就读于潍坊学院环境设计专业，系统学习室内设计、景观规划、建筑设计与施工工艺，熟练掌握 AutoCAD、3DMax 和 Photoshop以及GPT/codex、Gemini、ComfyUI等AI设计工具，能够完成二维制图、三维效果呈现、图像后期、方案排版与视频演示。
+                    我就读于潍坊学院环境设计专业，系统学习室内设计、景观规划、建筑设计与施工工艺，熟练掌握 AutoCAD、SketchUp、3DMax 和 Photoshop以及GPT/codex、Gemini、Claude Code、ComfyUI等AI设计工具，能够完成二维制图、三维效果呈现、图像后期、方案排版与视频演示。
                   </p>
                   <p>
                     我关注空间从前期分析、概念推演到视觉呈现与方案落地的完整过程，也将 AIGC 作为辅助设计判断和提升效率的方法。曾在校园文化墙项目中完成资料分析、主题提炼、提示词优化与视觉控制，将项目周期压缩至原来的一半，并在实践中持续提升空间判断、执行效率与协作能力。
@@ -1036,6 +1151,12 @@ export default function App() {
                     <div className="project-points">
                       {project.media ? (
                         <>
+                          {project.renderProcess ? (
+                            <a className="project-media-trigger" href={`/projects/${project.slug}#ai-render-process`}>
+                              <strong>AI 渲染过程</strong>
+                              <span>{project.renderProcess.cases.length} 组白模与效果图对照</span>
+                            </a>
+                          ) : null}
                           <button
                             type="button"
                             className="project-media-trigger"
@@ -1043,7 +1164,7 @@ export default function App() {
                               setProjectMediaModal({
                                 type: 'images',
                                 title: `${project.title} · 效果图展示`,
-                                subtitle: '项目效果图已接入，可继续补充更多角度与细节图。',
+                                subtitle: project.gallerySubtitle || '项目效果图已接入，可继续补充更多角度与细节图。',
                                 items: project.media.images,
                               })
                             }
@@ -1051,6 +1172,12 @@ export default function App() {
                             <strong>效果图展示</strong>
                             <span>{project.media.images.length} 张效果图</span>
                           </button>
+                          {project.media.diagrams?.length > 0 ? (
+                            <a className="project-media-trigger" href={`/projects/${project.slug}#design-analysis`}>
+                              <strong>设计分析</strong>
+                              <span>{project.media.diagrams.length} 张分析图</span>
+                            </a>
+                          ) : null}
                           {project.media.videos.length > 0 ? (
                             <button
                               type="button"
@@ -1059,7 +1186,7 @@ export default function App() {
                                 setProjectMediaModal({
                                   type: 'videos',
                                   title: `${project.title} · 短片展示`,
-                                  subtitle: '项目短片已接入，视频文件较大，首次播放可能需要一点缓冲。',
+                                  subtitle: project.videoSubtitle || '项目短片已接入，视频文件较大，首次播放可能需要一点缓冲。',
                                   items: project.media.videos,
                                 })
                               }
@@ -1087,7 +1214,7 @@ export default function App() {
                               setProjectMediaModal({
                                 type: 'images',
                                 title: `${project.title} · 效果图展示`,
-                                subtitle: '项目效果图已接入，可继续补充更多角度与细节图。',
+                                subtitle: project.gallerySubtitle || '项目效果图已接入，可继续补充更多角度与细节图。',
                                 items: project.media.images,
                               })
                             }
@@ -1105,7 +1232,7 @@ export default function App() {
                               setProjectMediaModal({
                                 type: 'videos',
                                 title: `${project.title} · 短片展示`,
-                                subtitle: '项目短片已接入，视频文件较大，首次播放可能需要一点缓冲。',
+                                subtitle: project.videoSubtitle || '项目短片已接入，视频文件较大，首次播放可能需要一点缓冲。',
                                 items: project.media.videos,
                               })
                             }

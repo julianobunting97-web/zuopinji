@@ -13,6 +13,38 @@ portfolio is separate and was not changed during the light-theme redesign.
 - Preview server: `node preview-server.cjs`, serving `dist` at port 4173.
   Run `npm run build` after edits. Do not open preview windows automatically.
 
+## People's Park project
+
+Added `2026-10-25` at `/projects/people-park`, with its card first in Featured
+Projects. Content is in `src/data/peoplePark.js`: two final portrait boards,
+26 design renderings, 13 plans/analysis images, and a 64-second local video.
+The original source is `E:\桌面\作品集作品素材合集\人民公园`; reference-case
+photos in its `临安人民公园` folder are excluded. Image display copies and
+full-resolution WebP versions live in `public/portfolio/people-park`; the
+source files are unchanged. `scripts/prepare-people-park.cjs` regenerates the
+image assets and verifies source hashes and full-resolution pixel dimensions.
+The video is H.264/AAC, 1920 × 1080, with fast-start metadata.
+
+This addition updates the local website. Online publication requires the
+user's confirmation under their external-action instructions.
+
+## Interior project additions (2026-10-25)
+
+- `/projects/single-apartment`: adds two full-frame white-model / AI-render
+  comparisons before the existing gallery, plus four floor-plan/material
+  diagrams. Its description follows the source `设计说明.txt`.
+- `/projects/family-home`: adds nine floor-plan/material diagrams and the
+  original presentation board after the gallery.
+- The shared project cards link directly to the relevant new sections. Project
+  anchors wait for fonts and React content before positioning the page.
+- Data: `src/data/interiorUpdates.js`; comparison layout:
+  `src/components/RenderProcess.jsx`. The images use the existing zoom viewer.
+- `scripts/prepare-interior-updates.cjs` compares sources under
+  `E:\桌面\作品集作品素材合集` to existing assets. All 14 existing renderings
+  match their source hashes; 16 images were added. Copies match source hashes,
+  full-size WebP dimensions are preserved, and source files are unchanged.
+- These changes are local and have not been published online.
+
 ## Sites Publication
 
 Use `.sites-release` as the isolated Sites checkout. Its manifest and Git history

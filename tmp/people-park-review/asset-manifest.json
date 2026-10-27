@@ -1,0 +1,383 @@
+{
+  "sourceRoot": "E:\\桌面\\作品集作品素材合集\\人民公园",
+  "files": [
+    {
+      "source": "中心区域1.png",
+      "target": "people-park-cover.jpg",
+      "width": 3840,
+      "height": 2160,
+      "sha256": "3393eb657c47dac0f81e91cc0f0ae0bdad0b364054af1d4d413eb86064e6a5b0",
+      "fullBytes": 2580458,
+      "previewBytes": 404798
+    },
+    {
+      "source": "展板/1.jpg",
+      "target": "people-park/boards/board-01.jpg",
+      "width": 4961,
+      "height": 7016,
+      "sha256": "478e2615dbee3c03bfc8113506e85c3eba293b649063a6f89743fda90640604a",
+      "fullBytes": 7819938,
+      "previewBytes": 816968
+    },
+    {
+      "source": "展板/2.jpg",
+      "target": "people-park/boards/board-02.jpg",
+      "width": 4961,
+      "height": 7016,
+      "sha256": "275c3b8ff099eaf5d840a641a194cab75fde82aa79fc04259fe97d35f83a2fea",
+      "fullBytes": 5151298,
+      "previewBytes": 635132
+    },
+    {
+      "source": "中心区域1.png",
+      "target": "people-park/renders/central-core.jpg",
+      "width": 3840,
+      "height": 2160,
+      "sha256": "3393eb657c47dac0f81e91cc0f0ae0bdad0b364054af1d4d413eb86064e6a5b0",
+      "fullBytes": 2580458,
+      "previewBytes": 404798
+    },
+    {
+      "source": "建筑学长_1789529538750.png",
+      "target": "people-park/renders/aerial-view.jpg",
+      "width": 2048,
+      "height": 880,
+      "sha256": "123832dd0a1a8a101c86286a20e0a1da1fb88119fe062835b60496b78e7d3ca4",
+      "fullBytes": 590066,
+      "previewBytes": 281684
+    },
+    {
+      "source": "入口.jpeg",
+      "target": "people-park/renders/entrance.jpg",
+      "width": 2752,
+      "height": 1536,
+      "sha256": "e889862e8d135b8c781fb95c97b3def4c20fb00893a998f6b64677f40a062f6d",
+      "fullBytes": 876994,
+      "previewBytes": 192926
+    },
+    {
+      "source": "下沉瀑布.jpeg",
+      "target": "people-park/renders/water-garden.jpg",
+      "width": 2752,
+      "height": 1536,
+      "sha256": "dc6e8535333ebe048ceff139973bb5a985c8dbcb16c9c2563b918798705ad9ba",
+      "fullBytes": 1031132,
+      "previewBytes": 278146
+    },
+    {
+      "source": "湖泊.jpeg",
+      "target": "people-park/renders/lakeside.jpg",
+      "width": 2752,
+      "height": 1536,
+      "sha256": "c3e11b1814c42f3362d0b0747178031550dd704a400ee633d7e07fe879749591",
+      "fullBytes": 1441026,
+      "previewBytes": 354768
+    },
+    {
+      "source": "亲子乐园.jpeg",
+      "target": "people-park/renders/playground.jpg",
+      "width": 2752,
+      "height": 1536,
+      "sha256": "7bfabf0a041b1f9a7fbef86e7e0aa5b1214ef6795a9700683e4cc9258e3c7d1f",
+      "fullBytes": 1700244,
+      "previewBytes": 430254
+    },
+    {
+      "source": "骑行区.png",
+      "target": "people-park/renders/pump-track.jpg",
+      "width": 2048,
+      "height": 1152,
+      "sha256": "314afc156e5aba6d97f44feb0ca40fd5e6b5fa1193dbdfdb2e66911c6094424e",
+      "fullBytes": 605768,
+      "previewBytes": 262606
+    },
+    {
+      "source": "运动场1.jpeg",
+      "target": "people-park/renders/sports-courts.jpg",
+      "width": 2752,
+      "height": 1536,
+      "sha256": "15b7043813971e4eef1ee6698080dc611b2eb58902683ccf2f96f586a9522c0c",
+      "fullBytes": 1611172,
+      "previewBytes": 433082
+    },
+    {
+      "source": "摄影图/19.png",
+      "target": "people-park/renders/sports-night.jpg",
+      "width": 2048,
+      "height": 1152,
+      "sha256": "2a3b4c0a086ec1061221c7b0dfca5c5f04b26cf65d78e71ea58e02d15185a75d",
+      "fullBytes": 525240,
+      "previewBytes": 224950
+    },
+    {
+      "source": "建筑学长_1789360816743.jpeg",
+      "target": "people-park/renders/under-canopy-play.jpg",
+      "width": 2752,
+      "height": 1536,
+      "sha256": "aee5bb21a38a9a2eda97b76b4fde8605e32b0a5ee0814208075e0c27777cc648",
+      "fullBytes": 1130320,
+      "previewBytes": 271242
+    },
+    {
+      "source": "摄影图/01.png",
+      "target": "people-park/renders/waterfall-fern.jpg",
+      "width": 1672,
+      "height": 941,
+      "sha256": "52fca6baf682f67b53da2413ee495763942536080ad7507e6b6806c3c7e77a42",
+      "fullBytes": 477178,
+      "previewBytes": 328544
+    },
+    {
+      "source": "摄影图/02.png",
+      "target": "people-park/renders/waterfall-close.jpg",
+      "width": 1672,
+      "height": 940,
+      "sha256": "e3e80b963e581c3ccf438ad5251dd10cb24de1e40cf6a9993abf52bf949af2b6",
+      "fullBytes": 624984,
+      "previewBytes": 427242
+    },
+    {
+      "source": "摄影图/03.png",
+      "target": "people-park/renders/stream.jpg",
+      "width": 1672,
+      "height": 940,
+      "sha256": "a7349afac84ea0c08dc94976bd7517bf6b7f0a43e6345be8b36fb9246a593867",
+      "fullBytes": 501272,
+      "previewBytes": 339972
+    },
+    {
+      "source": "摄影图/04.png",
+      "target": "people-park/renders/lake-pavilion.jpg",
+      "width": 1672,
+      "height": 941,
+      "sha256": "1dbcbb269c761d053182bb881f0eeb663c5c9b1a483382bce7cf5de5c32f5ab5",
+      "fullBytes": 679546,
+      "previewBytes": 464276
+    },
+    {
+      "source": "摄影图/05.png",
+      "target": "people-park/renders/wetland-walk.jpg",
+      "width": 1672,
+      "height": 941,
+      "sha256": "853a15d748e5ea596d6cdb0a4351a4c517bcd31d24d22d28228d67d3188bd010",
+      "fullBytes": 534896,
+      "previewBytes": 350074
+    },
+    {
+      "source": "摄影图/06.png",
+      "target": "people-park/renders/sculpture-01.jpg",
+      "width": 2752,
+      "height": 1536,
+      "sha256": "a72a1ce894e99157bc4b72571c91f007203e40dd4d5e7c499b89b6af83d2083c",
+      "fullBytes": 781084,
+      "previewBytes": 201978
+    },
+    {
+      "source": "摄影图/07.png",
+      "target": "people-park/renders/sculpture-02.jpg",
+      "width": 2752,
+      "height": 1536,
+      "sha256": "6f02ca47d1e7d07848e5f2536df504f70b24c5ffcf148a76ce445517d1dd87cc",
+      "fullBytes": 783882,
+      "previewBytes": 202098
+    },
+    {
+      "source": "摄影图/08.png",
+      "target": "people-park/renders/playground-aerial.jpg",
+      "width": 2400,
+      "height": 1792,
+      "sha256": "29eb4594d52d517deb20a89f2e160d96a6acdb8ef5da07db1335890b72a5a7c6",
+      "fullBytes": 1522540,
+      "previewBytes": 501632
+    },
+    {
+      "source": "摄影图/09.png",
+      "target": "people-park/renders/splash-play.jpg",
+      "width": 2400,
+      "height": 1792,
+      "sha256": "14a56423c6157a68d6235c33ba3e4f4af260b99ffe516e3242676d5ff885b6f4",
+      "fullBytes": 1212502,
+      "previewBytes": 382144
+    },
+    {
+      "source": "摄影图/10.jpeg",
+      "target": "people-park/renders/climbing-play.jpg",
+      "width": 2400,
+      "height": 1792,
+      "sha256": "1d2266f78e5d778fd450352e6ad9da84c1c8fd83f36d4c6b5e40f13232931ab8",
+      "fullBytes": 1426902,
+      "previewBytes": 463784
+    },
+    {
+      "source": "摄影图/11.png",
+      "target": "people-park/renders/cycling.jpg",
+      "width": 1672,
+      "height": 941,
+      "sha256": "6dcf2714ebd1c8b571ef3707a43aaac574983d3357fd81ddcb32a508ba5d605c",
+      "fullBytes": 405242,
+      "previewBytes": 233780
+    },
+    {
+      "source": "摄影图/12.png",
+      "target": "people-park/renders/skating.jpg",
+      "width": 1672,
+      "height": 941,
+      "sha256": "82d05e3a21218de9a4575c31ba9f7966c067dc5cc5045c2b9e1178a80941d99f",
+      "fullBytes": 532170,
+      "previewBytes": 341658
+    },
+    {
+      "source": "摄影图/13.png",
+      "target": "people-park/renders/play-details.jpg",
+      "width": 1672,
+      "height": 941,
+      "sha256": "06d2b23044bf634c5572cdd4fd3b8bc56261428398fb31bde28abc99c0660761",
+      "fullBytes": 470030,
+      "previewBytes": 300956
+    },
+    {
+      "source": "摄影图/14.png",
+      "target": "people-park/renders/rest-details.jpg",
+      "width": 1672,
+      "height": 941,
+      "sha256": "78a7aa0a186a30b1919404f492050cfc537ef2caaf00a10562f22185bf882db4",
+      "fullBytes": 426612,
+      "previewBytes": 267672
+    },
+    {
+      "source": "摄影图/15.png",
+      "target": "people-park/renders/entrance-details.jpg",
+      "width": 1672,
+      "height": 940,
+      "sha256": "9df646cd7c032b87e5375eef9f0e2c92b804c4342ad5d2a904fcf0be491a7554",
+      "fullBytes": 398620,
+      "previewBytes": 255598
+    },
+    {
+      "source": "摄影图/16.png",
+      "target": "people-park/renders/sculpture-overlook.jpg",
+      "width": 1672,
+      "height": 941,
+      "sha256": "27152c7e2d89cc6c01c347f2be537e1fa7b379d92df5f66ac7ba9a84d4917b1f",
+      "fullBytes": 424988,
+      "previewBytes": 278026
+    },
+    {
+      "source": "平面图5.jpeg",
+      "target": "people-park/diagrams/master-plan.jpg",
+      "width": 2752,
+      "height": 1536,
+      "sha256": "9cab0f2b854d476cad5aa4a337797131bd3f186305c614d2e9cb01e8f0ac451f",
+      "fullBytes": 1213238,
+      "previewBytes": 300600
+    },
+    {
+      "source": "立面图.png",
+      "target": "people-park/diagrams/core-section.jpg",
+      "width": 3840,
+      "height": 2160,
+      "sha256": "73b744a98cdffc17cb5a22a63b22f0f9040b4c79d40c7bb62ede6c7169a1a230",
+      "fullBytes": 2268204,
+      "previewBytes": 282310
+    },
+    {
+      "source": "output/pdf/人民公园_A2竞赛展板/独立分析图/01_省市区位分析.png",
+      "target": "people-park/diagrams/location.jpg",
+      "width": 3071,
+      "height": 1890,
+      "sha256": "acc9e8481c091347693a662e2d40e3c01ca7167d9c7fa1770e4120a4bba5ba1f",
+      "fullBytes": 106592,
+      "previewBytes": 28188
+    },
+    {
+      "source": "output/pdf/人民公园_A2竞赛展板/独立分析图/02_场地界面分析.png",
+      "target": "people-park/diagrams/site-boundary.jpg",
+      "width": 3071,
+      "height": 2067,
+      "sha256": "27a3c5fc4944ab4f43111016db57d49c4a9b1b181ed7766070b04fce78d745eb",
+      "fullBytes": 52978,
+      "previewBytes": 16478
+    },
+    {
+      "source": "output/pdf/人民公园_A2竞赛展板/独立分析图/03_功能分区分析.png",
+      "target": "people-park/diagrams/zoning.jpg",
+      "width": 3071,
+      "height": 2150,
+      "sha256": "7a12804ccea3afab35b32691a3fd6da272268461a35bf0d55d346b86e998290d",
+      "fullBytes": 101918,
+      "previewBytes": 29688
+    },
+    {
+      "source": "output/pdf/人民公园_A2竞赛展板/独立分析图/04_空间结构分析.png",
+      "target": "people-park/diagrams/structure.jpg",
+      "width": 3071,
+      "height": 2150,
+      "sha256": "33e425163a21ff4f933fea336835043d62983a0107ad79c52a8464308d1bb3a5",
+      "fullBytes": 89334,
+      "previewBytes": 25830
+    },
+    {
+      "source": "output/pdf/人民公园_A2竞赛展板/独立分析图/05_慢行游线分析.png",
+      "target": "people-park/diagrams/circulation.jpg",
+      "width": 3071,
+      "height": 2150,
+      "sha256": "e20198b3b47fbc7a97ad946de07e026b626a5474b1fcf1597527d8a64f8918ad",
+      "fullBytes": 144346,
+      "previewBytes": 42758
+    },
+    {
+      "source": "output/pdf/人民公园_A2竞赛展板/独立分析图/06_蓝绿系统分析.png",
+      "target": "people-park/diagrams/blue-green.jpg",
+      "width": 3071,
+      "height": 2150,
+      "sha256": "ea2f12edbefacadfc5abfe1c765893938cf8b9829e2b002541fa5acddf16bb26",
+      "fullBytes": 121754,
+      "previewBytes": 35092
+    },
+    {
+      "source": "output/pdf/人民公园_A2竞赛展板/独立分析图/07_核心空间关系剖意.png",
+      "target": "people-park/diagrams/spatial-section.jpg",
+      "width": 3544,
+      "height": 1654,
+      "sha256": "bebbdb5099973b492062b3909713a7872d2c0013b362036eed9b0e7889abad87",
+      "fullBytes": 72608,
+      "previewBytes": 17930
+    },
+    {
+      "source": "output/pdf/人民公园_A2竞赛展板/独立分析图/08_核心分层分析.png",
+      "target": "people-park/diagrams/core-layers.jpg",
+      "width": 2835,
+      "height": 2186,
+      "sha256": "607000feffd709251ec0992dffef46cb53bb23953db6be9064b959d1d89111f2",
+      "fullBytes": 104424,
+      "previewBytes": 35124
+    },
+    {
+      "source": "output/pdf/人民公园_A2竞赛展板/独立分析图/09_滨水生态策略.png",
+      "target": "people-park/diagrams/waterfront.jpg",
+      "width": 3308,
+      "height": 1595,
+      "sha256": "2e9ceeab9dd1e1ee9edc3fdfd9b5c433c9c1719fee5a342c4acb3cb0224fa2ae",
+      "fullBytes": 67398,
+      "previewBytes": 17416
+    },
+    {
+      "source": "output/pdf/人民公园_A2竞赛展板/独立分析图/10_亲子节点分析.png",
+      "target": "people-park/diagrams/family-play.jpg",
+      "width": 3071,
+      "height": 1890,
+      "sha256": "4f7dc4a3a72397231d83f7093ac2587ff0aef45af17e5c398054f8b81b25a4b0",
+      "fullBytes": 91156,
+      "previewBytes": 26672
+    },
+    {
+      "source": "output/pdf/人民公园_A2竞赛展板/独立分析图/11_分时共享活动.png",
+      "target": "people-park/diagrams/shared-use.jpg",
+      "width": 3544,
+      "height": 922,
+      "sha256": "9e4c9bc5f97c744e797c6d1338e41c19890d90832ca2a93a9679ef6e2b391df5",
+      "fullBytes": 55836,
+      "previewBytes": 14190
+    }
+  ]
+}
